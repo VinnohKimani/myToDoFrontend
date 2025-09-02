@@ -95,14 +95,14 @@ export default function SignUpForm() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-green-400 to-green-600 px-4">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br bg-amber-200 px-4">
       <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 sm:p-8">
-        <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-6">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center text-black mb-6">
           Create an Account
         </h1>
-        <p className=" text-gray-600 text-sm mt-4">
+        <p className=" text-blue-600 text-sm mt-4">
           Already have an account?{" "}
-          <a href="/login" className="text-green-600 hover:underline">
+          <a href="/login" className="text-blue-800 hover:underline">
             Login
           </a>
         </p>
@@ -110,13 +110,13 @@ export default function SignUpForm() {
           {/* First + Last Name */}
           <div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">
+              <label className="block text-sm font-medium text-blue-700">
                 First Name
               </label>
               <input
                 type="text"
                 {...register("first_name")}
-                className="mt-1 w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+                className="mt-1 w-full px-3 py-2 border rounded-lg focus:ring-2 "
                 placeholder="first name"
               />
               {errors.first_name && (
@@ -127,13 +127,13 @@ export default function SignUpForm() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700">
+              <label className="block text-sm  font-medium text-blue-700">
                 Last Name
               </label>
               <input
                 type="text"
                 {...register("last_name")}
-                className="mt-1 w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+                className="mt-1 w-full px-3 py-2 border rounded-lg "
                 placeholder="last name"
               />
               {errors.last_name && (
@@ -146,13 +146,13 @@ export default function SignUpForm() {
 
           {/* Email */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-blue-700">
               Email
             </label>
             <input
               type="email"
               {...register("email")}
-              className="mt-1 w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+              className="mt-1 w-full px-3 py-2 border rounded-lg"
               placeholder="email@gmail.com"
             />
             {errors.email && (
@@ -164,13 +164,13 @@ export default function SignUpForm() {
 
           {/* Phone */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-blue-700">
               Phone Number
             </label>
             <input
               type="text"
               {...register("phone_number")}
-              className="mt-1 w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+              className="mt-1 w-full px-3 py-2 border rounded-lg "
               placeholder="0712345678"
             />
             {errors.phone_number && (
@@ -182,20 +182,20 @@ export default function SignUpForm() {
 
           {/* Password */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-blue-700">
               Password
             </label>
             <div className="relative">
               <input
                 type={showPassword ? "text" : "password"}
                 {...register("password")}
-                className="mt-1 w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500"
+                className="mt-1 w-full px-3 py-2 border rounded-lg "
                 placeholder="********"
                 autoComplete="new-password"
               />
               <button
                 type="button"
-                className="absolute inset-y-0 right-3 flex items-center text-gray-500"
+                className="absolute inset-y-0 right-3 flex items-center text-blue-700"
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
@@ -210,7 +210,7 @@ export default function SignUpForm() {
 
           {/* Confirm Password */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-blue-700">
               Confirm Password
             </label>
             <div className="relative">
@@ -223,7 +223,7 @@ export default function SignUpForm() {
               />
               <button
                 type="button"
-                className="absolute inset-y-0 right-3 flex items-center text-gray-500"
+                className="absolute inset-y-0 right-3 flex items-center text-blue-700"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
                 {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
@@ -240,7 +240,7 @@ export default function SignUpForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-2 px-4 bg-green-600 hover:bg-green-700 text-white rounded-lg shadow-md font-medium transition disabled:opacity-50"
+            className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md font-medium transition disabled:opacity-50"
           >
             {isSubmitting ? "Signing up..." : "Sign Up"}
           </button>
